@@ -1,16 +1,28 @@
-import mongoose from "mongoose";
+import mongoose, { model } from "mongoose";
 
 const schema = new mongoose.Schema({
-    name:{
-        type: 'String',
-        require : true
+    name: {
+        type: String,
+        required: true
+
     },
 
-    password:{
-        type : "String",
-        require : true
+    email: {
+        type: String,
+        required: true
+    },
+
+    username: {
+        type: String,
+        required: true,
+        unique:true
+    },
+
+    password: {
+        type: String,
+        required: true
     }
 })
 
-
-export default  schema;
+const detail = mongoose.model("execl", schema)
+export default detail;
