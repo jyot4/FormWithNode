@@ -1,27 +1,27 @@
-import mongoose  from "mongoose";
+import mongoose from "mongoose";
 const schema = new mongoose.Schema({
-    idCategory:{
+    id: {
         type: "String",
         require: true
     },
-    strCategory:{
+    category: {
         type: "String",
         require: true
     },
-    strCategoryDescription:{
+    dec: {
         type: "String",
-        require: true 
+        require: true
     },
-    strCategoryThumb:{
+    image: {
         type: "String",
-        require: true  
+        require: true
     },
 
- 
+
 
 
 
 })
 
-   const foodDatas = mongoose.model('foodData', schema)
-    export default foodDatas
+const foodData = mongoose.model('fooddata', schema)
+export default foodData
