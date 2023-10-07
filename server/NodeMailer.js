@@ -20,7 +20,7 @@ const transporter = nodemailer.createTransport({
     },
   });
 
-
+//Get random message code....
 
   function generateRandomCode() {
     const length = 6; 
